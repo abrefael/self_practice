@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-22 11:32:30.242649",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "start",
+  "session_start",
+  "column_break_oonh",
+  "end",
+  "session_end",
+  "section_break_bifh",
+  "patient",
+  "summary"
+ ],
+ "fields": [
+  {
+   "fieldname": "start",
+   "fieldtype": "Datetime",
+   "label": "Session start"
+  },
+  {
+   "fieldname": "session_start",
+   "fieldtype": "Button",
+   "label": "Start session"
+  },
+  {
+   "fieldname": "column_break_oonh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end",
+   "fieldtype": "Datetime",
+   "label": "Session end"
+  },
+  {
+   "fieldname": "session_end",
+   "fieldtype": "Button",
+   "label": "End session"
+  },
+  {
+   "fieldname": "section_break_bifh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "summary",
+   "fieldtype": "Text Editor",
+   "label": "Session summary"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "patient",
+   "options": "Patients",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-22 13:51:54.966312",
+ "modified_by": "Administrator",
+ "module": "Self Practice",
+ "name": "Session summary",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

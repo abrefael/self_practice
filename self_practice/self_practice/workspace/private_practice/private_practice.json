@@ -1,0 +1,51 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"PxA56oWmZN\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Private Practice</span>\",\"col\":12}},{\"id\":\"qCr9VB4ciz\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Session_Calendar\",\"col\":12}},{\"id\":\"UfV0pxeqvA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Patients\",\"col\":3}},{\"id\":\"1hZ82d4Ck1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Session Summary\",\"col\":3}}]",
+ "creation": "2024-09-22 14:26:36.120116",
+ "custom_blocks": [
+  {
+   "custom_block_name": "Session_Calendar",
+   "label": "Session_Calendar"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "edit-fill",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Private Practice",
+ "links": [],
+ "modified": "2024-09-22 14:57:03.673967",
+ "modified_by": "Administrator",
+ "module": "Self Practice",
+ "name": "Private Practice",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Patients",
+   "link_to": "Patients",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "Session Summary",
+   "link_to": "Session summary",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Private Practice"
+}
