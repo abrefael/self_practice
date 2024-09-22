@@ -17,7 +17,7 @@ frappe.ui.form.on('Sessions Calendar', {
                 end: frm.doc.end,
                 patient: frm.doc.patient
             }).then(doc => {
-                frm.set_value('session_sum','http://' + window.location.hostname + '/app/session-summary/' + doc.name);
+                frm.set_value('session_sum','/app/session-summary/' + doc.name);
             });
 	    }
 	    else{
