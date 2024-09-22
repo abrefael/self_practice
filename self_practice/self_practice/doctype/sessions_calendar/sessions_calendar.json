@@ -58,8 +58,7 @@
   {
    "fieldname": "session_sum",
    "fieldtype": "Data",
-   "hidden": 1,
-   "options": "URL"
+   "hidden": 1
   }
  ],
  "index_web_pages_for_search": 1,
