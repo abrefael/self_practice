@@ -83,7 +83,7 @@ app_license = "mit"
 # ------------
 
 # before_install = "self_practice.install.before_install"
-# after_install = "self_practice.install.after_install"
+after_install = "self_practice.install.after_install"
 
 # Uninstallation
 # ------------
