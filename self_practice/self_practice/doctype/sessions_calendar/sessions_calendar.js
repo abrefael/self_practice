@@ -10,19 +10,20 @@
 
 frappe.ui.form.on('Sessions Calendar', {
 	go_to_session_summary(frm) {
-	    if (!frm.doc.session_sum){
-    		frappe.db.insert({
-                doctype: 'Session summary',
-                start: frm.doc.start,
-                end: frm.doc.end,
-                patient: frm.doc.patient
-            }).then(doc => {
-                frm.set_value('session_sum','/app/session-summary/' + doc.name);
-            });
-	    }
-	    else{
-	        window.location.href = frm.doc.session_sum;
-	    }
-
+		if (frm.is_dirty()) {
+			frm.save();
+		}
+		if (!frm.doc.session_sum){
+			frappe.db.insert({
+				doctype: 'Session summary',
+				start: frm.doc.start,
+				end: frm.doc.end,
+				patient: frm.doc.patient
+			}).then(doc => {
+				frm.set_value('session_sum','/app/session-summary/' + doc.name);
+			});
+		}
+		frm.save();
+		window.location.href = frm.doc.session_sum;
 	}
 });
