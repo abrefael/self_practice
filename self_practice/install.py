@@ -12,7 +12,7 @@ def after_install():
 			owner='Administrator',
 			docstatus=0,
 			private=0,
-			html='<iframe src="/app/sessions-calendar/view/calendar" style="width:100%"></iframe>',
+			html='<iframe src="/app/sessions-calendar/view/calendar" style="width:100%;height: 850px;"></iframe>',
 			script='',
 			style='';
 	""")
