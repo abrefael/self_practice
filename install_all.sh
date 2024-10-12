@@ -3,6 +3,7 @@
 
 read -rsp "Please enter sudo password:" passwrd
 read -rsp "Please enter mysql root password:" sql_passwrd
+read -rsp "Please enter stie admin password:" admin_pass
 echo -e "What is your time zone? (e.g.: Africa/Ceuta)\n (Hint: if you don't know your time zone identifier, checkout the following Wikipedia page:\nhttps://en.wikipedia.org/wiki/List_of_tz_database_time_zones)"
 read -p "" timez
 echo $passwrd | sudo -S timedatectl set-timezone "$timez"
@@ -45,10 +46,9 @@ echo $passwrd | sudo -S pip3 install frappe-bench
 bench init --frappe-branch version-15 frappe-bench
 cd frappe-bench/
 chmod -R o+rx /home/$USER/
-bench new-site self_practice.local --db-root-password $sql_passwrd
-bench use self_practice.local
 bench get-app --resolve-deps https://github.com/abrefael/self_practice.git
-bench install-app self_practice
+bench new-site self_practice.local --db-root-password $sql_passwrd --admin-password $admin_pass --install-app self_practice
+bench use self_practice.local
 echo $passwrd | sudo -S sed -i -e 's/include:/include_tasks:/g' /usr/local/lib/python3.10/dist-packages/bench/playbooks/roles/mariadb/tasks/main.yml
 yes | sudo bench setup production $USER
 FILE="/etc/supervisor/supervisord.conf"
