@@ -5,9 +5,8 @@ if [ $port_num=='' ] ; then
   port_num=8080;
 fi
 
-mkdir -p output
 if [ -f Dockerfile ]; then 
-  docker build --build-arg CACHEBUST=$(date +%s) --tag=tmoney/accounting .;
+  docker build --build-arg CACHEBUST=$(date +%s) --tag=self_practice .;
 fi
 
 
